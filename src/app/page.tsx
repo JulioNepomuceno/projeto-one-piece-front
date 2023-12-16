@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <main className="w-full">
       <Container>
-        <h2 className="text-lg font-bold mt-8 mb-5">Conheca algumas akuma no mi</h2>
+        <h2 className="text-lg font-bold mt-8 mb-5">Conheca as akuma no mi</h2>
 
         <section className="grid gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {data.map((item) => (
@@ -29,6 +29,8 @@ export default async function Home() {
 
           ))}
         </section>
+
+        
 
       </Container>
     </main>
