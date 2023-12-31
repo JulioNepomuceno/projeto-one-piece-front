@@ -1,38 +1,22 @@
-import { CardAkumanomi } from '@/components/cardakumanomi';
 import { Container } from '@/components/container';
-import { AkumanomiProps } from '@/utils/types/akumanomi';
+import { Header } from '@/components/header';
 
 
-async function getAkumanomiData() {
 
-  try {
-    const result = await fetch('http://localhost:3333/list_akumanomi', { next: { revalidate: 320 } })
-    return result.json();
-  } catch (error) {
-    throw new Error('Falha ao buscar dados')
-  }
-}
 
 export default async function Home() {
 
-  const data: AkumanomiProps[] = await getAkumanomiData();
 
-  return (
-    <main className="w-full">
-      <Container>
-        <h2 className="text-lg font-bold mt-8 mb-5">Conheca as akuma no mi</h2>
+    return (
+        <main className="w-full">
+            <Container>
+                <h2 className="text-lg font-bold mt-8 mb-5">Conheca as akuma no mi</h2>
 
-        <section className="grid gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {data.map((item) => (
+                <section className="grid gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-            <CardAkumanomi key={item.id} data={item} />
+                </section>
 
-          ))}
-        </section>
-
-        
-
-      </Container>
-    </main>
-  )
+            </Container>
+        </main>
+    )
 }

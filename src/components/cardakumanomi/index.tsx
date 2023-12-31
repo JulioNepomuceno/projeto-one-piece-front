@@ -5,6 +5,7 @@ import { AkumanomiProps } from "@/utils/types/akumanomi";
 interface CardAkumanomiProps{
     data: AkumanomiProps
 }
+
 export function CardAkumanomi({data}: CardAkumanomiProps){
     return (
         <Link href={`/akumanomi/${data.id}`}>
