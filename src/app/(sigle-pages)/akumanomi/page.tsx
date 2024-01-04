@@ -9,6 +9,7 @@ async function getAkumanomiData() {
        
         const result = await fetch('http://localhost:3333/list_akumanomi', {next: { revalidate: 320 }});
         return result.json();
+        
     } catch (error) {
         throw new Error('Falha ao buscar dados')
     }
