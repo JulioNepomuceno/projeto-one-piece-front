@@ -17,7 +17,7 @@ export default async function Tripulacao() {
     return (
         <Container>
             <div className="flex items-center justify-between mb-4">
-                <h1 className="text-3xl font-bold">Nova tripulação</h1>
+                <h1 className="text-2xl font-bold text-white">Nova tripulação</h1>
 
                 <div>
                     <Link href="/admin/tripulacao/capitao" className="bg-blue-500 text-white px-4 py-1 rounded">
