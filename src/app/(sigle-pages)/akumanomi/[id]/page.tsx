@@ -19,7 +19,7 @@ async function getData(id: string) {
 export default async function AkumanomiDetails({ params: { id } }: { params: { id: string } }) {
 
     const data: AkumanomiProps = await getData(id)
-
+    
     if (!data) {
         redirect('/')
     }
@@ -36,7 +36,7 @@ export default async function AkumanomiDetails({ params: { id } }: { params: { i
                         <div className="relative  h-96 hover:scale-105 transition-all duration-300">
                             <Image
                                 className="rounded-lg object-cover "
-                                src={data.imagem}
+                                src={data.url_imagem}
                                 alt={data.nome}
                                 fill={true}
                                 quality={100}
@@ -52,10 +52,6 @@ export default async function AkumanomiDetails({ params: { id } }: { params: { i
                         <p>{data.descricao}</p>
 
                         <h2 className="font-bold text-lg mt-7 mb-2 text-yellow-500">Usuário</h2>
-
-                        <div className="flex gap-2 flex-wrap">
-                            <Label name={data.usuario_atual} />
-                        </div>
 
                         <h2 className="font-bold text-lg mt-7 mb-2 text-yellow-500">Tipo de akuma no mi</h2>
 

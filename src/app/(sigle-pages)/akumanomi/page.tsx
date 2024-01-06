@@ -19,7 +19,7 @@ async function getAkumanomiData() {
 export default async function Akumanomi() {
     
     const data: AkumanomiProps[] = await getAkumanomiData();
-    
+   
     return (
         <main>
             <Container>

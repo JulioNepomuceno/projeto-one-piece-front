@@ -1,8 +1,7 @@
 export interface AkumanomiProps{
     id: string;
     nome: string;
-    imagem:string;
-    usuario_atual:string;
+    url_imagem:string;
     tipo: string;
     descricao:string;
 }
